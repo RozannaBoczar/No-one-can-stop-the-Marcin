@@ -14,11 +14,22 @@ public class PlayerController : MonoBehaviour
         camera = GetComponentInChildren<Camera>();
     }
 
+    int howManyTimesPlayerCanJump;
+
     void Update()
     {
         HandleWalking();
         HandleHorizontalRotation();
         HandleVerticalRotation();
+
+        if (IsGrounded())
+            howManyTimesPlayerCanJump = 1;
+
+        if (howManyTimesPlayerCanJump > 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            rigidbody.AddForce(Vector3.up * 2, ForceMode.VelocityChange);
+            howManyTimesPlayerCanJump--;
+        }
 
     }
 
@@ -49,5 +60,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift)) velocity = velocity * 2;
         velocity.y = rigidbody.velocity.y;
         rigidbody.velocity = velocity;
+    }
+
+    bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 2);
     }
 }

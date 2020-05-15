@@ -28,11 +28,11 @@ public class foundMarcinBox : MonoBehaviour
 
     IEnumerator WaitForSec()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(3);
         uiObject.SetActive(false);
         Destroy(uiObject);
         Destroy(gameObject); //info tylko raz
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Menu");
         //Application.Quit();
 
     }
