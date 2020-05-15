@@ -28,7 +28,7 @@ public class GiveThisToPortier : MonoBehaviour
         {
 
            // Destroy(uiObject);
-           uiObject.SetActive(false);
+           //uiObject.SetActive(false);
             Destroy(portierInfo);
             Destroy(uiObject);
             uiObject2.SetActive(true);
