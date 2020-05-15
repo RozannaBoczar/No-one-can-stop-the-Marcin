@@ -17,11 +17,13 @@ public class PortierInfo : MonoBehaviour
 
     void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.tag == "MC")
-        {
-            uiObject.SetActive(true);
-            StartCoroutine("WaitForSec");
+        if(uiObject!=null){
+            if (player.gameObject.tag == "MC")
+            {
+                uiObject.SetActive(true);
+                StartCoroutine("WaitForSec");
 
+            }
         }
 
     }

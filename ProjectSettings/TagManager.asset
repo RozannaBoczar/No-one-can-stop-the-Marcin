@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - MC
+  - door2
+  - cola
+  - portier
   layers:
   - Default
   - TransparentFX
