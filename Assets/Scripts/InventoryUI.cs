@@ -7,6 +7,7 @@ public class InventoryUI : MonoBehaviour
 {
     public Inventory Inventory;
     private int localIndex = 0;
+    string itemName = "";
 
     void Start()
     {
@@ -81,10 +82,9 @@ public class InventoryUI : MonoBehaviour
             }
             i++;
 
-
-
-
         }
+
+
     }
 
 

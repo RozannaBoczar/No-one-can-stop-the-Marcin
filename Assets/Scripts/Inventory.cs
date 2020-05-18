@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
 
     public int publicIndex = 0;
 
+    //public InventoryUI inventoryUI;
+
     //private List<IInventoryItem> mItems = new List<IInventoryItem>();
     public List<IInventoryItem> mItems = new List<IInventoryItem>();
 
@@ -37,7 +39,9 @@ public class Inventory : MonoBehaviour
 
                 mItems.Add(item);
                 print(mItems[mItems.Count - 1].Name);
+                print(item.Name);
                 item.OnPickup();
+
                 //print("item added");
 
                 if (ItemAdded != null)

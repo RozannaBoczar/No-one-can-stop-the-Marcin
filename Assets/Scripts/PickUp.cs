@@ -21,7 +21,7 @@ public class PickUp : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(this.transform.position, tempParent.transform.position);
-        if (distance >= 2f)
+        if (distance >= 7f)
             isHolding = false;
         //check if isholdin
         if (isHolding == true)

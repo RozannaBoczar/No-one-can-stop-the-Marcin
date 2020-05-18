@@ -9,12 +9,23 @@ public class HandleButton : MonoBehaviour
 
     public Inventory _Inventory;
     public int index = 0;
+    public string itemName = "";
 
 
     void LateUpdate()
     {
         //clicked = false;
         //highlited = false;
+    }
+
+    public void SetName(string name)
+    {
+        itemName = name;
+    }
+
+    public void RemoveName()
+    {
+        itemName = "";
     }
 
     public void Click()
