@@ -16,6 +16,8 @@ public class PickUp : MonoBehaviour
     public Transform destination;
     public bool isClicked = false;
 
+    public Inventory inventory;
+
     void Update()
     {
         distance = Vector3.Distance(this.transform.position, tempParent.transform.position);
@@ -37,6 +39,16 @@ public class PickUp : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.G))
             {
                 isHolding = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                print("inventory");
+                IInventoryItem item = this.GetComponent<IInventoryItem>();
+                if (item != null)
+                {
+                    inventory.AddItem(item);
+                }
             }
 
 
