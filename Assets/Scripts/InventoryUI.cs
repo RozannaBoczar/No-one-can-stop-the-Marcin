@@ -84,6 +84,42 @@ public class InventoryUI : MonoBehaviour
 
         }
 
+        Image nextImage = inventoryPanel.GetChild(Inventory.publicIndex + 1).GetChild(0).GetChild(0).GetComponent<Image>();
+        if (nextImage.enabled)
+        {
+            print("cos tam dalej jest");
+            int j = 0;
+            foreach(Transform slot in inventoryPanel)
+            {
+                print("foreach");
+                if(j > Inventory.publicIndex)
+                {
+                    print("if");
+                    Image currentImage = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+                    Image previousImage = inventoryPanel.GetChild(j-1).GetChild(0).GetChild(0).GetComponent<Image>();
+
+                    if (currentImage.enabled)
+                    {
+                        previousImage.enabled = true;
+                        previousImage.sprite = currentImage.sprite;
+                        currentImage.enabled = false;
+                        currentImage.sprite = null;
+                        
+
+                    }
+                    //przesuwamy
+                    
+
+
+                }
+                j++;
+            }
+        }
+        else
+        {
+            print("dalej nic nie ma");
+        }
+
 
     }
 
