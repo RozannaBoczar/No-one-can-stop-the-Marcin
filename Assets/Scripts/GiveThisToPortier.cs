@@ -11,12 +11,14 @@ public class GiveThisToPortier : MonoBehaviour
 
     public GameObject uiObject;
     private Animator _animator;
+    public bool ifOpened;
 
     void Start()
     {
         _animator = door.GetComponent<Animator>();
         //uiObject = GameObject.Find("portier");
         //uiObject.SetActive(false);
+        ifOpened = false;
         uiObject.SetActive(false);
         uiObject2.SetActive(false);
         
@@ -24,25 +26,29 @@ public class GiveThisToPortier : MonoBehaviour
 
     void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.tag == "cola")
+        if (ifOpened == false)
         {
+            if (player.gameObject.tag == "cola")
+            {
 
-           // Destroy(uiObject);
-           //uiObject.SetActive(false);
-            Destroy(portierInfo);
-            Destroy(uiObject);
-            uiObject2.SetActive(true);
-            OpenDoor();
-            StartCoroutine("WaitForSec");
+                // Destroy(uiObject);
+                //uiObject.SetActive(false);
+                ifOpened = true;
+                Destroy(portierInfo);
+                Destroy(uiObject);
+                uiObject2.SetActive(true);
+                OpenDoor();
+                StartCoroutine("WaitForSec");
 
 
+            }
         }
 
     }
 
     IEnumerator WaitForSec()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         Destroy(colaCan);
         Destroy(uiObject2);
        

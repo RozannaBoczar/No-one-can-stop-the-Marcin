@@ -8,6 +8,7 @@ TagManager:
   - door2
   - cola
   - portier
+  - card
   layers:
   - Default
   - TransparentFX
