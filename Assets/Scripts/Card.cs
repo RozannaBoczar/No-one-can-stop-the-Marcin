@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plant : MonoBehaviour, IInventoryItem
+public class Card : MonoBehaviour, IInventoryItem
 {
 
     public GameObject tempParent;
+
     public string Name
     {
         get
         {
-            return "Plant";
+            return "Card";
         }
     }
 

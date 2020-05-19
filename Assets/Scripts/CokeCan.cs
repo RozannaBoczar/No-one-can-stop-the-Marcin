@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CokeCan : MonoBehaviour, IInventoryItem
 {
+
+    public GameObject tempParent;
     public string Name
     {
         get
@@ -32,12 +34,22 @@ public class CokeCan : MonoBehaviour, IInventoryItem
         print("on drop2");
         RaycastHit hit = new RaycastHit();
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //if(Physics.Raycast(ray,))
+
+        /*
         if (Physics.Raycast(ray, out hit, 1000))
         {
             print("on drop");
             gameObject.SetActive(true);
-            gameObject.transform.position = hit.point;
+            //gameObject.transform.position = hit.point;
+            gameObject.transform.position = tempParent.transform.position;
 
         }
+        */
+
+        print("on drop");
+        gameObject.SetActive(true);
+        //gameObject.transform.position = hit.point;
+        gameObject.transform.position = tempParent.transform.position;
     }
 }
