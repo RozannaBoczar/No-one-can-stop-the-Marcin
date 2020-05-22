@@ -1,0 +1,40 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2006 Google, Inc.
+
+newmtl Wood_Board_Cork
+Ka 0.000000 0.000000 0.000000
+Kd 0.843137 0.788235 0.450980
+Ks 0.330000 0.330000 0.330000
+map_Kd abacus_box/Wood_Board_Cork.jpg
+
+newmtl _Wood_Cherry_Original_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.596078 0.337255 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd abacus_box/_Wood_Cherry_Original_1.jpg
+
+newmtl _Wood_OSB_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.941176 0.764706 0.478431
+Ks 0.330000 0.330000 0.330000
+map_Kd abacus_box/_Wood_OSB_1.jpg
+
+newmtl _Metal_Aluminum_Anodized_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.792157 0.819608 0.858824
+Ks 0.330000 0.330000 0.330000
+map_Kd abacus_box/_Metal_Aluminum_Anodized_1.jpg
+
+newmtl Wood_Lumber_ButtJoined
+Ka 0.000000 0.000000 0.000000
+Kd 0.643137 0.596078 0.439216
+Ks 0.330000 0.330000 0.330000
+map_Kd abacus_box/Wood_Lumber_ButtJoined.jpg
+
+newmtl Metal_Brass_Ceiling
+Ka 0.000000 0.000000 0.000000
+Kd 0.862745 0.650980 0.474510
+Ks 0.330000 0.330000 0.330000
+map_Kd abacus_box/Metal_Brass_Ceiling.jpg
+
