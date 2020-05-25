@@ -43,7 +43,7 @@ public class PickUp : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.I))
             {
-                print("inventory");
+                //print("inventory");
                 IInventoryItem item = this.GetComponent<IInventoryItem>();
                 if (item != null)
                 {

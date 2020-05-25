@@ -55,10 +55,10 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(IInventoryItem item, int index)
     {
-        print("if?");
+        //print("if?");
         if (mItems.Contains(item))
         {
-            print("if");
+            //print("if");
             mItems.Remove(item);
 
             item.OnDrop();
@@ -71,7 +71,7 @@ public class Inventory : MonoBehaviour
 
             if (ItemRemoved != null)
             {
-                print(index);
+                //print(index);
                 SetIndex(index);
                 ItemRemoved(this, new InventoryEventArgs(item));
             }

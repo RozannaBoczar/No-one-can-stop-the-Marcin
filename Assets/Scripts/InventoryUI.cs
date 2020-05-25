@@ -21,20 +21,20 @@ public class InventoryUI : MonoBehaviour
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
     {
         Transform inventoryPanel = transform.Find("InventoryPanel");
-        print("BBBBBBBBBB");
-        print(inventoryPanel);
+        //print("BBBBBBBBBB");
+        //print(inventoryPanel);
         foreach (Transform slot in inventoryPanel)
         {
 
             Transform imageTransform = slot.GetChild(0).GetChild(0);
             Image image = imageTransform.GetComponent<Image>();
             //ItemDrag itemDrag = imageTransform.GetComponent<ItemDrag>();
-            print("aa");
+            //print("aa");
 
             //if (!image.enabled)
             if (image.sprite == Resources.Load("None"))
             {
-                print("free slot");
+                //print("free slot");
                 image.enabled = true;
                 image.sprite = e.Item.Image;
 
@@ -55,7 +55,7 @@ public class InventoryUI : MonoBehaviour
 
         foreach (Transform slot in inventoryPanel)
         {
-            print(Inventory.publicIndex);
+            //print(Inventory.publicIndex);
             if (i == Inventory.publicIndex)
             {
                 Transform imageTransform = slot.GetChild(0).GetChild(0);
@@ -74,7 +74,7 @@ public class InventoryUI : MonoBehaviour
                 }
                 */
 
-                print("image enabled");
+                //print("image enabled");
                 image.enabled = false;
                 image.sprite = null;
                 //itemDrag.Item = null;
@@ -87,14 +87,14 @@ public class InventoryUI : MonoBehaviour
         Image nextImage = inventoryPanel.GetChild(Inventory.publicIndex + 1).GetChild(0).GetChild(0).GetComponent<Image>();
         if (nextImage.enabled)
         {
-            print("cos tam dalej jest");
+            //print("cos tam dalej jest");
             int j = 0;
             foreach(Transform slot in inventoryPanel)
             {
-                print("foreach");
+                //print("foreach");
                 if(j > Inventory.publicIndex)
                 {
-                    print("if");
+                    //print("if");
                     Image currentImage = slot.GetChild(0).GetChild(0).GetComponent<Image>();
                     Image previousImage = inventoryPanel.GetChild(j-1).GetChild(0).GetChild(0).GetComponent<Image>();
 

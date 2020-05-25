@@ -21,4 +21,10 @@ public class TurnOn : MonoBehaviour
         rend.material = material[1];
 
     }
+
+    public void OnCabel()
+    {
+        rend.material = material[1];
+
+    }
 }

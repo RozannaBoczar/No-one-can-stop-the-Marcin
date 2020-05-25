@@ -33,7 +33,7 @@ public class Item : MonoBehaviour, IInventoryItem
 
     public void OnDrop()
     {
-        print("on drop2");
+        //print("on drop2");
         RaycastHit hit = new RaycastHit();
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -48,7 +48,7 @@ public class Item : MonoBehaviour, IInventoryItem
         }
         */
 
-        print("on drop");
+        //print("on drop");
         gameObject.SetActive(true);
         //gameObject.transform.position = hit.point;
         gameObject.transform.position = tempParent.transform.position;
