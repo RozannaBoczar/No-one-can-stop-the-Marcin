@@ -32,11 +32,14 @@ public class PortierInfo : MonoBehaviour
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(5);
-        uiObject.SetActive(false);
-        //Destroy(uiObject);
-        //Destroy(gameObject); //info tylko raz
-        //SceneManager.LoadScene("Menu");
-        //Application.Quit();
+        if (uiObject != null)
+        {
+            uiObject.SetActive(false);
+        }
+            //Destroy(uiObject);
+            //Destroy(gameObject); //info tylko raz
+            //SceneManager.LoadScene("Menu");
+            //Application.Quit();
 
-    }
+        }
 }
