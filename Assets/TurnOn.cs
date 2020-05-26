@@ -7,24 +7,45 @@ public class TurnOn : MonoBehaviour
 
     public Material[] material;
     Renderer rend;
+    bool isRouterOn;
 
     void Start()
     {
         rend = GetComponent<Renderer>();
         rend.enabled = true;
         rend.sharedMaterial = material[0];
-    }
-    
+        isRouterOn = false;
 
+    }
+
+    /*
     void OnMouseDown()
     {
         rend.material = material[1];
 
     }
+    */
 
-    public void OnCabel()
+    void OnTriggerEnter(Collider player)
     {
-        rend.material = material[1];
+        print("pierwszy");
+        if (isRouterOn == false)
+        {
+            print("drugi");
+            if (player.gameObject.tag == "cabel")
+            {
+
+                // Destroy(uiObject);
+                //uiObject.SetActive(false);
+                isRouterOn = true;
+                print("ruter");
+                rend.material = material[1];
+
+                Destroy(player.gameObject);
+
+
+            }
+        }
 
     }
 }
