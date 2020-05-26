@@ -70,60 +70,60 @@ public class KeyPad1 : MonoBehaviour
 
             if (keypadScreen)
             {
-                GUI.Box(new Rect(1024- 300, 0, 320, 455), "");
-                GUI.Box(new Rect(1024 - 300 + 5, 5, 310, 25), input);
+                GUI.Box(new Rect(0, 0, 320, 455), "");
+                GUI.Box(new Rect( 5, 5, 310, 25), input);
 
-                if (GUI.Button(new Rect(1024 - 300 + 5, 35, 100, 100), "1"))
+                if (GUI.Button(new Rect(5, 35, 100, 100), "1"))
                 {
                     input = input + "1";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 + 110, 35, 100, 100), "2"))
+                if (GUI.Button(new Rect(110, 35, 100, 100), "2"))
                 {
                     input = input + "2";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 + 215, 35, 100, 100), "3"))
+                if (GUI.Button(new Rect(215, 35, 100, 100), "3"))
                 {
                     input = input + "3";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 + 5, 140, 100, 100), "4"))
+                if (GUI.Button(new Rect(5, 140, 100, 100), "4"))
                 {
                     input = input + "4";
                 }
 
-                if (GUI.Button(new Rect(1024 - 310 + 110, 140, 100, 100), "5"))
+                if (GUI.Button(new Rect(110, 140, 100, 100), "5"))
                 {
                     input = input + "5";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 +  215, 140, 100, 100), "6"))
+                if (GUI.Button(new Rect(215, 140, 100, 100), "6"))
                 {
                     input = input + "6";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 + 5, 245, 100, 100), "7"))
+                if (GUI.Button(new Rect(5, 245, 100, 100), "7"))
                 {
                     input = input + "7";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 +  110, 245, 100, 100), "8"))
+                if (GUI.Button(new Rect(110, 245, 100, 100), "8"))
                 {
                     input = input + "8";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 + 215, 245, 100, 100), "9"))
+                if (GUI.Button(new Rect(215, 245, 100, 100), "9"))
                 {
                     input = input + "9";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 + 110, 350, 100, 100), "0"))
+                if (GUI.Button(new Rect(110, 350, 100, 100), "0"))
                 {
                     input = input + "0";
                 }
 
-                if (GUI.Button(new Rect(1024 - 300 + 215, 350, 100, 100), "X"))
+                if (GUI.Button(new Rect(215, 350, 100, 100), "X"))
                 {
                     if (input.Length != 0)
                     {
